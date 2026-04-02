@@ -1,6 +1,7 @@
 "use client";
 
 import { ClerkLoaded, ClerkLoading, UserButton } from "@clerk/nextjs";
+import { Suspense } from "react";
 import { Bell, Loader2 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { toast } from "sonner";
@@ -37,7 +38,9 @@ export const Topbar = () => {
         <div className="flex items-center gap-x-2">
           {pathname === "/" && (
             <div className="hidden lg:block">
-              <Filters />
+              <Suspense fallback={null}>
+                <Filters />
+              </Suspense>
             </div>
           )}
 
