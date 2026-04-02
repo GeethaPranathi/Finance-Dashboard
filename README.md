@@ -46,6 +46,8 @@ Here is the folder structure of this app.
 <!--- FOLDER_STRUCTURE_START --->
 ```bash
 finance-dashboard/
+  |- actions/
+    |-- role.ts
   |- app/
     |-- (auth)/
     |-- (dashboard)/
@@ -75,14 +77,18 @@ finance-dashboard/
     |-- filters.tsx
     |-- header-logo.tsx
     |-- header.tsx
+    |-- insights-section.tsx
     |-- line-variant.tsx
     |-- nav-button.tsx
     |-- navigation.tsx
     |-- pie-variant.tsx
     |-- radar-variant.tsx
     |-- radial-variant.tsx
+    |-- role-switcher.tsx
     |-- select.tsx
+    |-- sidebar.tsx
     |-- spending-pie.tsx
+    |-- topbar.tsx
     |-- welcome-msg.tsx
   |- config/
     |-- index.ts
@@ -99,19 +105,24 @@ finance-dashboard/
     |-- transactions/
   |- hooks/
     |-- use-confirm.tsx
+    |-- use-get-user-role.ts
   |- lib/
     |-- hono.ts
+    |-- rbac.ts
     |-- utils.ts
   |- providers/
     |-- query-provider.tsx
     |-- sheet-provider.tsx
   |- public/
   |- scripts/
+    |-- final-seed.ts
     |-- seed.ts
+    |-- set-role.ts
   |- .env.example
   |- .env/.env.local
   |- .eslintrc.json
   |- .gitignore
+  |- .npmrc
   |- .prettierrc
   |- bun.lockb
   |- components.json
@@ -119,6 +130,7 @@ finance-dashboard/
   |- environment.d.ts
   |- middleware.ts
   |- next.config.mjs
+  |- package-lock.json
   |- package.json
   |- postcss.config.mjs
   |- tailwind.config.ts
@@ -237,8 +249,8 @@ Useful resources and dependencies that are used in Finance.
 - Thanks to CodeWithAntonio: https://codewithantonio.com/
 <!--- DEPENDENCIES_START --->
 - [@clerk/backend](https://www.npmjs.com/package/@clerk/backend): ^1.1.3
-- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^5.0.8
-- [@hono/clerk-auth](https://www.npmjs.com/package/@hono/clerk-auth): ^2.0.0
+- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^7.0.8
+- [@hono/clerk-auth](https://www.npmjs.com/package/@hono/clerk-auth): ^3.1.0
 - [@hono/zod-validator](https://www.npmjs.com/package/@hono/zod-validator): ^0.2.1
 - [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers): ^3.10.0
 - [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless): ^0.9.5
@@ -268,7 +280,7 @@ Useful resources and dependencies that are used in Finance.
 - [eslint](https://www.npmjs.com/package/eslint): ^8
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.2.3
 - [eslint-plugin-unused-imports](https://www.npmjs.com/package/eslint-plugin-unused-imports): ^3.2.0
-- [hono](https://www.npmjs.com/package/hono): ^4.11.9
+- [hono](https://www.npmjs.com/package/hono): ^4.12.10
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.564.0
 - [next](https://www.npmjs.com/package/next): 15.5.10
 - [next-themes](https://www.npmjs.com/package/next-themes): ^0.4.6
