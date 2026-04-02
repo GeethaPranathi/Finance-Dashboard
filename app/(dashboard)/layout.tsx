@@ -1,4 +1,4 @@
-import type { PropsWithChildren, Suspense } from "react";
+import type { PropsWithChildren } from "react";
 import React from "react";
 
 import { Sidebar } from "@/components/sidebar";
