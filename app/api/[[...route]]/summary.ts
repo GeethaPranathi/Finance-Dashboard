@@ -1,4 +1,4 @@
-import { clerkMiddleware, getAuth } from "@hono/clerk-auth";
+import { getAuth } from "@hono/clerk-auth";
 import { zValidator } from "@hono/zod-validator";
 import { differenceInDays, parse, subDays } from "date-fns";
 import { and, desc, eq, gte, lt, lte, sql, sum } from "drizzle-orm";

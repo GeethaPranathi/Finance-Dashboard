@@ -5,7 +5,6 @@ import { useUser } from "@clerk/nextjs";
 import { toast } from "sonner";
 import { Loader2, ChevronDown } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,

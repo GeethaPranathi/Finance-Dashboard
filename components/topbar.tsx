@@ -7,7 +7,6 @@ import { toast } from "sonner";
 
 import { RoleSwitcher } from "./role-switcher";
 import { Filters } from "./filters";
-import { useGetUserRole } from "@/hooks/use-get-user-role";
 
 const pageTitles: Record<string, { label: string; sub: string }> = {
   "/":             { label: "Dashboard",    sub: "Your financial overview" },
